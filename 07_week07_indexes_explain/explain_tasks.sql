@@ -49,3 +49,11 @@ LEFT JOIN payment p ON p.invoice_id = i.invoice_id
 GROUP BY i.invoice_id, i.invoice_date, i.total_amount
 HAVING COALESCE(SUM(p.amount), 0.00) = 0.00
 ORDER BY i.invoice_date;
+
+-- 6) Appointments per room
+EXPLAIN
+SELECT r.room_code, COUNT(*) AS usage_count
+FROM appointment a
+JOIN room r ON r.room_id = a.room_id
+GROUP BY r.room_code
+ORDER BY usage_count DESC;
