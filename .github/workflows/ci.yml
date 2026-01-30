@@ -44,7 +44,7 @@ jobs:
           mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 03_week03_mapping/schema_v1.sql
           mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 03_week03_mapping/seed_v1.sql
 
-      - name: Run integrity checks
+      - name: Run Week 3 integrity checks
         env:
           MYSQL_HOST: 127.0.0.1
           MYSQL_PORT: 3306
@@ -52,3 +52,28 @@ jobs:
           MYSQL_PASSWORD: root
         run: |
           bash scripts/check_integrity.sh 03_week03_mapping/integrity_v1.sql
+
+      - name: Apply Week 6 billing (if present)
+        run: |
+          if [[ -f 06_week06_billing/schema_billing.sql && -f 06_week06_billing/seed_billing.sql && -f 06_week06_billing/integrity.sql ]]; then
+            mysql -h 127.0.0.1 -P 3306 -uroot -proot < shared/reset.sql
+            mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 03_week03_mapping/schema_v1.sql
+            mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 03_week03_mapping/seed_v1.sql
+            mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 06_week06_billing/schema_billing.sql
+            mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 06_week06_billing/seed_billing.sql
+          else
+            echo "Week 6 billing files not found, skipping."
+          fi
+
+      - name: Run Week 6 integrity checks (if present)
+        env:
+          MYSQL_HOST: 127.0.0.1
+          MYSQL_PORT: 3306
+          MYSQL_USER: root
+          MYSQL_PASSWORD: root
+        run: |
+          if [[ -f 06_week06_billing/integrity.sql ]]; then
+            bash scripts/check_integrity.sh 06_week06_billing/integrity.sql
+          else
+            echo "Week 6 integrity file not found, skipping."
+          fi
