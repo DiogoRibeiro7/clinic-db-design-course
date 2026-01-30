@@ -1,16 +1,16 @@
 # ER diagram rubric
 
 ## Criteria
-- Entities cover all in-scope concepts from the requirements.
+- Cardinality is correct for all relationships.
+- Optionality is correct for all relationships.
 - Primary keys are clearly identified.
-- Relationships have correct cardinality and optionality.
-- Many-to-many relationships are resolved with junction entities.
-- Attribute names use snake_case and are meaningful.
-- The model avoids obvious redundancy and update anomalies.
-- Notes capture key assumptions and constraints.
+- Foreign keys and junction entities are used correctly.
+- Entities cover all in-scope concepts.
+- The model avoids obvious redundancy and anomalies.
+- Naming is consistent and in snake_case.
 
 ## Scoring (suggested)
-- Requirements coverage: 30%
-- Relationship correctness: 30%
-- Key design and normalization: 25%
-- Naming and clarity: 15%
+- Cardinality and optionality: 40%
+- Keys and relationship correctness: 30%
+- Requirements coverage: 20%
+- Naming and clarity: 10%
