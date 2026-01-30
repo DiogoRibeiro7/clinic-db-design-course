@@ -1,7 +1,10 @@
 -- Week 04 bad schema: 2NF/3NF violations
--- Issues:
--- - appointment_service stores service_name and base_price (depends on service_id)
--- - patient stores city and state_name (depends on zip_code)
+-- Functional dependencies (FDs):
+-- 1) patient_id -> first_name, last_name, phone, email, zip_code, city, state_name
+-- 2) zip_code -> city, state_name
+-- 3) service_id -> service_name, base_price
+-- 4) appointment_id -> patient_id, start_dt, end_dt
+-- 5) (appointment_id, service_id) -> quantity, service_name, base_price
 
 CREATE TABLE IF NOT EXISTS patient (
   patient_id INT AUTO_INCREMENT PRIMARY KEY,

@@ -13,6 +13,7 @@
 3) Remove service_name and base_price from appointment_service without losing data.
 4) Create a zip_code reference table and update patient to reference it.
 5) Produce a 3NF schema (schema_v2.sql) and migrate the data.
+6) Verify integrity with integrity_v2.sql.
 
 ## Deliverables
 - Corrected schema (3NF)
