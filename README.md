@@ -7,11 +7,12 @@
 - Practice iterative design changes with a final change request.
 
 ## Standard workflow
-1) reset.sql
-2) schema.sql
-3) seed.sql
-4) exercises.sql (queries)
-5) integrity.sql
+Use the week-specific files for each lab. Example (Week 3):
+1) shared/reset.sql
+2) 03_week03_normalization/schema_v1.sql
+3) 03_week03_normalization/seed_v1.sql
+4) 03_week03_normalization/queries_v1.sql
+5) 03_week03_normalization/integrity_v1.sql
 
 ## Folder structure
 - 00_setup/ (install notes, tooling, and starter checks)
