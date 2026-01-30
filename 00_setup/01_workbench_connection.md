@@ -1,4 +1,4 @@
-# 01_workbench_connection
+# MySQL Workbench connection
 
 ## Goal
 Create a local MySQL Workbench connection and set up the course schema and user.
@@ -11,8 +11,9 @@ Create a local MySQL Workbench connection and set up the course schema and user.
    - Hostname: 127.0.0.1
    - Port: 3306
    - Username: root
-4) Click Test Connection and enter the root password.
-5) Save the connection.
+4) Click "Store in Vault..." to save the password.
+5) Click Test Connection and enter the root password.
+6) Save the connection.
 
 ## Create schema and user
 Open a SQL tab and run:
@@ -38,3 +39,9 @@ Notes:
   - Verify the MySQL service is running.
   - Double-check hostname 127.0.0.1 and port 3306.
   - If the root password is unknown, reset it using MySQL Installer.
+
+## First run checklist
+- [ ] Workbench connection saved as clinic_local
+- [ ] clinic_db schema created
+- [ ] clinic_admin@localhost created with privileges
+- [ ] Next: run shared/reset.sql then Week 3 scripts successfully

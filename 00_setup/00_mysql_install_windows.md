@@ -1,4 +1,4 @@
-# 00_mysql_install_windows
+# MySQL install on Windows (Community)
 
 ## Goal
 Install MySQL Community Server 8.0.x on Windows using MySQL Installer (Community).
@@ -7,25 +7,24 @@ Install MySQL Community Server 8.0.x on Windows using MySQL Installer (Community
 - Use MySQL Installer (Community) from the official MySQL downloads page.
 - Choose the latest 8.0.x installer.
 
-## Install steps
-1) Run MySQL Installer (Community).
-2) Select a setup type that includes MySQL Server and MySQL Workbench.
-3) Accept the defaults until the server configuration step.
+## Installer choices (exact)
+- Setup Type: **Developer Default**
+- Products: MySQL Server 8.0.x and MySQL Workbench 8.0.x (included in Developer Default)
 
 ## Server configuration (required)
-- Config type: Development Computer (default is fine).
+- Config type: Development Computer
 - Connectivity:
   - TCP/IP enabled
-  - Port: 3306
+  - Port: **3306**
 - Windows service:
-  - Configure as a Windows service
+  - Configure as a Windows service (MySQL80)
   - Start the service at system startup
 - Authentication:
   - Use strong passwords
   - Set a root password and store it safely
 
 ## Verify the service
-- Open Windows Services and confirm the MySQL service is running (usually named MySQL80).
+- Open Windows Services and confirm the MySQL service is running (MySQL80).
 - If it is stopped, start it manually.
 
 ## Troubleshooting
@@ -38,3 +37,10 @@ Install MySQL Community Server 8.0.x on Windows using MySQL Installer (Community
   - Confirm the service is running.
   - Confirm you are using the correct host (127.0.0.1) and port (3306).
   - Reset the password in MySQL Installer if needed.
+
+## First run checklist
+- [ ] MySQL Server 8.0.x installed using Developer Default
+- [ ] MySQL80 service running on port 3306
+- [ ] MySQL Workbench 8.0.x installed
+- [ ] Ready to connect with root in Workbench
+- [ ] Next: run shared/reset.sql then Week 3 scripts successfully
