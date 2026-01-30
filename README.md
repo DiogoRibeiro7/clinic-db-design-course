@@ -15,6 +15,12 @@ Week 1 (denormalized):
 3) 01_week01_basics/seed.sql
 4) 01_week01_basics/exercises.sql
 
+Week 2 (ER modeling):
+1) 02_week02_er_modeling/requirements.md
+2) 02_week02_er_modeling/er_diagram_template.drawio
+3) 02_week02_er_modeling/assumptions_template.md
+4) 02_week02_er_modeling/submission_checklist.md
+
 Week 3 (mapping):
 1) shared/reset.sql
 2) 03_week03_normalization/schema_v1.sql
@@ -55,6 +61,11 @@ Week 7 (indexes and EXPLAIN):
 6) 07_week07_indexing/explain_tasks.sql (before indexes)
 7) 07_week07_indexing/indexes.sql
 8) 07_week07_indexing/explain_tasks.sql (after indexes)
+
+Week 8 (final change request):
+1) 08_week08_final_change_request/change_request_A_insurance.md or change_request_B_lab_tests.md or change_request_C_rooms.md
+2) 08_week08_final_change_request/migration_template.sql
+3) 08_week08_final_change_request/final_submission_checklist.md
 
 ## Folder structure
 - 00_setup/ (install notes, tooling, and starter checks)
