@@ -1,7 +1,7 @@
 -- Week 06 reporting views
 
 -- Balance per patient (invoiced minus paid)
-CREATE OR REPLACE VIEW vw_patient_balance AS
+CREATE OR REPLACE VIEW patient_balance_view AS
 SELECT p.patient_id,
        p.first_name,
        p.last_name,
@@ -19,7 +19,7 @@ LEFT JOIN (
 GROUP BY p.patient_id, p.first_name, p.last_name;
 
 -- Revenue per doctor per month (invoiced)
-CREATE OR REPLACE VIEW vw_revenue_doctor_month AS
+CREATE OR REPLACE VIEW doctor_monthly_revenue_view AS
 SELECT d.doctor_id,
        d.first_name,
        d.last_name,
