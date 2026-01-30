@@ -1,11 +1,10 @@
 -- Migration template
--- 1) Add new tables/columns
--- 2) Backfill data
--- 3) Add constraints and indexes
--- 4) Validate with integrity queries
 
-START TRANSACTION;
+-- schema changes
+-- TODO: DDL for new tables/columns, constraints, indexes
 
--- TODO: your DDL and DML here
+-- data migration
+-- TODO: backfill or transform existing data
 
-COMMIT;
+-- validation queries
+-- TODO: integrity checks that must return 0 rows
