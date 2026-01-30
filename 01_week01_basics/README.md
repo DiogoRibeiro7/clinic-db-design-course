@@ -1,16 +1,22 @@
 # Week 01: Denormalized design and anomalies
 
-## Goal
-Experience the problems caused by a single, denormalized table and identify update, insert, and delete anomalies.
+## Learning goals
+- Recognize update, insert, and delete anomalies in a single flat table.
+- Explain why repeated data creates inconsistencies.
+- Practice writing queries that expose data quality problems.
 
-## How to run (MySQL Workbench)
-1) Open a connection.
-2) Run in order:
-   - 01_week01_basics/reset.sql
-   - 01_week01_basics/schema.sql
-   - 01_week01_basics/seed.sql
-3) Open 01_week01_basics/exercises.sql and complete the tasks.
+## Run order
+1) shared/reset.sql
+2) 01_week01_basics/schema.sql
+3) 01_week01_basics/seed.sql
+4) 01_week01_basics/exercises.sql
 
-## What to submit
-- Your completed version of 01_week01_basics/exercises.sql.
-- Short notes answering the anomaly questions in each task.
+## Deliverables
+- 01_week01_basics/exercises.sql (completed)
+- Short written answers for each anomaly question
+
+## Grading criteria
+- Tasks completed with correct SQL
+- Anomalies clearly identified and explained
+- Queries run in correct order
+- Output is consistent with the seed data

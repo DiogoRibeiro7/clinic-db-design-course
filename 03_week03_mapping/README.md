@@ -1,5 +1,10 @@
 # Week 03: ER to relational mapping
 
+## Learning goals
+- Map entities and relationships into tables with keys.
+- Use foreign keys and unique constraints correctly.
+- Practice joins for schedules, history, and workload.
+
 ## Run order
 1) shared/reset.sql
 2) 03_week03_mapping/schema_v1.sql
@@ -7,6 +12,12 @@
 4) 03_week03_mapping/queries_v1.sql
 5) 03_week03_mapping/integrity_v1.sql
 
-## What to submit
-- Completed 03_week03_mapping/queries_v1.sql with any notes.
-- Screenshots or output showing integrity checks return 0 rows.
+## Deliverables
+- 03_week03_mapping/queries_v1.sql (completed)
+- Output showing integrity checks return 0 rows
+
+## Grading criteria
+- Queries return correct results
+- Join paths are correct
+- Integrity checks pass with 0 rows
+- Naming follows snake_case
