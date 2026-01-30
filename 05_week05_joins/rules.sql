@@ -14,7 +14,7 @@ BEGIN
       AND NEW.end_dt > a.start_dt
   ) THEN
     SIGNAL SQLSTATE '45000'
-      SET MESSAGE_TEXT = 'Overlap detected: doctor has another appointment in this time range';
+      SET MESSAGE_TEXT = 'Doctor has overlapping appointment';
   END IF;
 END$$
 
@@ -31,7 +31,7 @@ BEGIN
       AND NEW.end_dt > a.start_dt
   ) THEN
     SIGNAL SQLSTATE '45000'
-      SET MESSAGE_TEXT = 'Overlap detected: doctor has another appointment in this time range';
+      SET MESSAGE_TEXT = 'Doctor has overlapping appointment';
   END IF;
 END$$
 
