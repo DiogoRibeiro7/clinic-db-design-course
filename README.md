@@ -23,6 +23,9 @@
 - MySQL Community Server 8.0.x
 - MySQL Workbench 8.0.x
 
+## Solutions policy
+Solutions are kept off the main branch. See `docs/solutions_policy.md` for the recommended workflow.
+
 ## Docker (labs)
 Use the root `docker-compose.yml` to start Mongo once for all labs.
 
