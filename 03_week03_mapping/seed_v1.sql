@@ -4,7 +4,9 @@ INSERT INTO patient (first_name, last_name, date_of_birth, phone, email) VALUES
 ('Bruno','Souza','1985-09-23','555-0202','bruno.souza@example.com'),
 ('Carla','Mendes','1992-01-05','555-0303','carla.mendes@example.com'),
 ('Diogo','Pereira','1988-06-17','555-0404','diogo.pereira@example.com'),
-('Eva','Martins','1995-11-30','555-0505','eva.martins@example.com');
+('Eva','Martins','1995-11-30','555-0505','eva.martins@example.com'),
+('Fernanda','Rocha','1991-02-14','555-0606','fernanda.rocha@example.com'),
+('Gustavo','Nunes','1983-08-09','555-0707','gustavo.nunes@example.com');
 
 INSERT INTO doctor (first_name, last_name, specialty, is_active) VALUES
 ('Marco','Lima','cardiology',1),
@@ -30,17 +32,25 @@ INSERT INTO appointment (patient_id, doctor_id, room_id, start_dt, end_dt, statu
 (2,1,1,'2026-02-04 09:00:00','2026-02-04 09:20:00','completed'),
 (3,2,2,'2026-02-05 09:30:00','2026-02-05 10:00:00','completed'),
 (4,4,3,'2026-02-06 08:30:00','2026-02-06 09:00:00','scheduled'),
-(5,3,1,'2026-02-08 11:00:00','2026-02-08 11:20:00','completed');
+(5,3,1,'2026-02-06 11:00:00','2026-02-06 11:20:00','completed'),
+(6,3,1,'2026-02-07 13:00:00','2026-02-07 13:30:00','completed'),
+(7,2,2,'2026-02-07 15:00:00','2026-02-07 15:20:00','completed'),
+(2,4,3,'2026-02-08 09:00:00','2026-02-08 09:40:00','completed'),
+(3,1,1,'2026-02-08 10:30:00','2026-02-08 11:00:00','completed'),
+(4,2,2,'2026-02-09 09:00:00','2026-02-09 09:30:00','completed'),
+(5,1,1,'2026-02-10 10:00:00','2026-02-10 10:30:00','scheduled');
 
 INSERT INTO prescription (appointment_id, prescribed_at, notes) VALUES
 (1,'2026-02-03 09:20:00','low dose daily'),
 (2,'2026-02-03 10:20:00','continue 7 days'),
 (4,'2026-02-05 09:50:00','as needed'),
-(6,'2026-02-08 11:10:00','after meal');
+(8,'2026-02-07 15:10:00','after meal'),
+(10,'2026-02-08 10:45:00','morning only');
 
 INSERT INTO prescription_item (prescription_id, medication_id, dose_mg, frequency_per_day, duration_days) VALUES
 (1,1,100,1,30),
 (2,1,100,1,30),
 (3,4,10,1,10),
 (4,3,500,3,7),
-(4,2,200,2,7);
+(4,2,200,2,7),
+(5,5,250,2,14);
