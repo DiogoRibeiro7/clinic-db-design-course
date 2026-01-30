@@ -22,4 +22,14 @@
 - Windows
 - MySQL Community Server 8.0.x
 - MySQL Workbench 8.0.x
+
+## Docker (labs)
+Use the root `docker-compose.yml` to start Mongo once for all labs.
+
+```shell
+docker compose up -d
+py scripts\wait_for_mongo.py --host 127.0.0.1 --port 27017 --timeout 60
+```
+
+See `docs/RUNNING_LABS.md` for the standard lab workflow and troubleshooting.
   
