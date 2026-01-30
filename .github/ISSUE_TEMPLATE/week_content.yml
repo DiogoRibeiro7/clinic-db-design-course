@@ -1,0 +1,42 @@
+name: Week content
+description: Propose or update weekly course content
+labels: ["week-content"]
+body:
+  - type: input
+    id: week_number
+    attributes:
+      label: Week number
+      description: Example: 03
+      placeholder: "03"
+    validations:
+      required: true
+  - type: textarea
+    id: files_changed
+    attributes:
+      label: Files changed
+      description: List files you added or updated
+      placeholder: |
+        03_week03_mapping/schema_v1.sql
+        03_week03_mapping/seed_v1.sql
+    validations:
+      required: true
+  - type: textarea
+    id: run_instructions
+    attributes:
+      label: Run instructions
+      description: How to run the scripts (reset -> schema -> seed -> integrity)
+      placeholder: |
+        mysql < shared/reset.sql
+        mysql clinic_db < 03_week03_mapping/schema_v1.sql
+        mysql clinic_db < 03_week03_mapping/seed_v1.sql
+        mysql clinic_db < 03_week03_mapping/integrity_v1.sql
+    validations:
+      required: true
+  - type: textarea
+    id: expected_outputs
+    attributes:
+      label: Expected outputs
+      description: What should be returned (e.g., integrity queries return 0 rows)
+      placeholder: "Integrity queries return 0 rows."
+    validations:
+      required: true

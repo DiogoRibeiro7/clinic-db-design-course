@@ -1,0 +1,36 @@
+name: Bug report
+description: Report an issue with weekly content
+labels: ["bug"]
+body:
+  - type: input
+    id: week_number
+    attributes:
+      label: Week number
+      description: Example: 05
+      placeholder: "05"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include exact commands used
+      placeholder: |
+        mysql < shared/reset.sql
+        mysql clinic_db < 05_week05_constraints_triggers/rules.sql
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      placeholder: "Trigger should block overlapping insert."
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      placeholder: "Insert succeeded without error."
+    validations:
+      required: true
