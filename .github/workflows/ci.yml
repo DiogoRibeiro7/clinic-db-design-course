@@ -41,8 +41,8 @@ jobs:
 
       - name: Apply Week 3 schema and seed
         run: |
-          mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 03_week03_mapping/schema_v1.sql
-          mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 03_week03_mapping/seed_v1.sql
+          mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 03_week03_normalization/schema_v1.sql
+          mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 03_week03_normalization/seed_v1.sql
 
       - name: Run Week 3 integrity checks
         env:
@@ -51,16 +51,16 @@ jobs:
           MYSQL_USER: root
           MYSQL_PASSWORD: root
         run: |
-          bash scripts/check_integrity.sh 03_week03_mapping/integrity_v1.sql
+          bash scripts/check_integrity.sh 03_week03_normalization/integrity_v1.sql
 
       - name: Apply Week 6 billing (if present)
         run: |
-          if [[ -f 06_week06_billing/schema_billing.sql && -f 06_week06_billing/seed_billing.sql && -f 06_week06_billing/integrity.sql ]]; then
+          if [[ -f 06_week06_transactions/schema_billing.sql && -f 06_week06_transactions/seed_billing.sql && -f 06_week06_transactions/integrity.sql ]]; then
             mysql -h 127.0.0.1 -P 3306 -uroot -proot < shared/reset.sql
-            mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 03_week03_mapping/schema_v1.sql
-            mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 03_week03_mapping/seed_v1.sql
-            mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 06_week06_billing/schema_billing.sql
-            mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 06_week06_billing/seed_billing.sql
+            mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 03_week03_normalization/schema_v1.sql
+            mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 03_week03_normalization/seed_v1.sql
+            mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 06_week06_transactions/schema_billing.sql
+            mysql -h 127.0.0.1 -P 3306 -uroot -proot clinic_db < 06_week06_transactions/seed_billing.sql
           else
             echo "Week 6 billing files not found, skipping."
           fi
@@ -72,8 +72,8 @@ jobs:
           MYSQL_USER: root
           MYSQL_PASSWORD: root
         run: |
-          if [[ -f 06_week06_billing/integrity.sql ]]; then
-            bash scripts/check_integrity.sh 06_week06_billing/integrity.sql
+          if [[ -f 06_week06_transactions/integrity.sql ]]; then
+            bash scripts/check_integrity.sh 06_week06_transactions/integrity.sql
           else
             echo "Week 6 integrity file not found, skipping."
           fi

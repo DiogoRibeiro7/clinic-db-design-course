@@ -1,4 +1,6 @@
--- Week 05 integrity query: detect overlaps per doctor
+-- Week 05 integrity query (legacy name)
+
+-- INTEGRITY: overlapping_appointments_by_doctor
 SELECT a1.appointment_id AS appointment_id_1,
        a2.appointment_id AS appointment_id_2,
        a1.doctor_id,
