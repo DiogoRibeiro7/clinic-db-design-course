@@ -1,0 +1,27 @@
+name: Feature request
+description: Request repo improvements (scripts, CI, templates, grading harness).
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      placeholder: "What do you want to add/change?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope / files impacted
+      placeholder: ".github/workflows/... shared/... scripts/..."
+    validations:
+      required: false

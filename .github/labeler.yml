@@ -1,0 +1,29 @@
+week-01:
+  - changed-files:
+      - any-glob-to-any-file: "01_week01_basics/**"
+
+week-02:
+  - changed-files:
+      - any-glob-to-any-file: "02_week02_er_model/**"
+
+week-03:
+  - changed-files:
+      - any-glob-to-any-file: "03_week03_mapping/**"
+
+week-04:
+  - changed-files:
+      - any-glob-to-any-file: "04_week04_normalization/**"
+
+week-05:
+  - changed-files:
+      - any-glob-to-any-file: "05_week05_constraints_triggers/**"
+
+week-06:
+  - changed-files:
+      - any-glob-to-any-file: "06_week06_billing/**"
+
+docs:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.md"
+      - any-glob-to-any-file: "00_setup/**"
+      - any-glob-to-any-file: "shared/**"

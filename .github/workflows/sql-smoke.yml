@@ -1,0 +1,78 @@
+name: SQL Smoke Tests (MySQL 8)
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  sql-smoke:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -proot"
+          --health-interval=5s
+          --health-timeout=5s
+          --health-retries=30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install MySQL client
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y mysql-client
+
+      - name: Wait for MySQL
+        run: |
+          for i in {1..60}; do
+            mysqladmin ping -h 127.0.0.1 -proot && break
+            sleep 2
+          done
+
+      - name: Run Week 3 (schema + seed + integrity)
+        env:
+          MYSQL_PWD: root
+        run: |
+          mysql -h 127.0.0.1 -u root < shared/reset.sql
+          mysql -h 127.0.0.1 -u root clinic_db < 03_week03_mapping/schema_v1.sql
+          mysql -h 127.0.0.1 -u root clinic_db < 03_week03_mapping/seed_v1.sql
+          mysql -h 127.0.0.1 -u root clinic_db < 03_week03_mapping/integrity_v1.sql > /tmp/integrity_week3.txt
+
+          # Fail if integrity output has any rows (non-empty output)
+          if [ -s /tmp/integrity_week3.txt ]; then
+            echo "Integrity checks returned rows (Week 3)."
+            cat /tmp/integrity_week3.txt
+            exit 1
+          fi
+
+      - name: Run Week 6 (schema + seed + rules + integrity)
+        env:
+          MYSQL_PWD: root
+        run: |
+          mysql -h 127.0.0.1 -u root < shared/reset.sql
+          mysql -h 127.0.0.1 -u root clinic_db < 03_week03_mapping/schema_v1.sql
+          mysql -h 127.0.0.1 -u root clinic_db < 03_week03_mapping/seed_v1.sql
+
+          mysql -h 127.0.0.1 -u root clinic_db < 06_week06_billing/schema_billing.sql
+          mysql -h 127.0.0.1 -u root clinic_db < 06_week06_billing/seed_billing.sql
+
+          # Optional rules file (triggers). Keep it non-fatal if not present.
+          if [ -f 06_week06_billing/rules.sql ]; then
+            mysql -h 127.0.0.1 -u root clinic_db < 06_week06_billing/rules.sql
+          fi
+
+          mysql -h 127.0.0.1 -u root clinic_db < 06_week06_billing/integrity.sql > /tmp/integrity_week6.txt
+
+          if [ -s /tmp/integrity_week6.txt ]; then
+            echo "Integrity checks returned rows (Week 6)."
+            cat /tmp/integrity_week6.txt
+            exit 1
+          fi

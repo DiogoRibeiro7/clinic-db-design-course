@@ -1,0 +1,30 @@
+name: Validate Repo Structure
+
+on:
+  pull_request:
+
+jobs:
+  structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate required folders exist
+        run: |
+          test -d "00_setup"
+          test -d "shared"
+          test -d "01_week01_basics"
+          test -d "03_week03_mapping"
+          echo "Basic structure OK."
+
+      - name: Validate shared/reset.sql exists
+        run: |
+          test -f "shared/reset.sql"
+          echo "shared/reset.sql OK."
+
+      - name: Validate Week 3 runnable pack exists
+        run: |
+          test -f "03_week03_mapping/schema_v1.sql"
+          test -f "03_week03_mapping/seed_v1.sql"
+          test -f "03_week03_mapping/integrity_v1.sql"
+          echo "Week 3 pack OK."

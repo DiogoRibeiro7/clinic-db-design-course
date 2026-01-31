@@ -1,11 +1,18 @@
-## Run order proof
-- [ ] reset.sql -> schema.sql -> seed.sql -> integrity.sql
+## What changed
+- 
 
-Paste the mysql client output below if possible (screenshots optional):
+## Why
+- 
 
-```
-<output here>
-```
+## How to test (required)
+- [ ] I ran: `shared/reset.sql`
+- [ ] I ran the week scripts in order (schema → seed → rules if any → integrity)
+- [ ] Integrity queries return **0 rows**
 
-## Summary
-Describe the change and any notes for reviewers.
+## Scope
+- [ ] Week content
+- [ ] Docs
+- [ ] Tooling / CI
+
+## Notes / Screenshots (optional)
+-
