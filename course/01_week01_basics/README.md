@@ -7,12 +7,12 @@
 
 ## Run order
 1) shared/reset.sql
-2) 01_week01_basics/schema.sql
-3) 01_week01_basics/seed.sql
-4) 01_week01_basics/exercises.sql
+2) course/01_week01_basics/schema.sql
+3) course/01_week01_basics/seed.sql
+4) course/01_week01_basics/exercises.sql
 
 ## Deliverables
-- 01_week01_basics/exercises.sql (completed)
+- course/01_week01_basics/exercises.sql (completed)
 - Short written answers for each anomaly question
 
 ## Grading criteria
@@ -20,3 +20,4 @@
 - Anomalies clearly identified and explained
 - Queries run in correct order
 - Output is consistent with the seed data
+

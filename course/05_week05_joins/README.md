@@ -7,14 +7,14 @@
 
 ## Run order
 1) shared/reset.sql
-2) 03_week03_normalization/schema_v1.sql
-3) 03_week03_normalization/seed_v1.sql
-4) 05_week05_joins/rules.sql
-5) 05_week05_joins/test_negative_inserts.sql
-6) 05_week05_joins/integrity.sql
+2) course/03_week03_normalization/schema_v1.sql
+3) course/03_week03_normalization/seed_v1.sql
+4) course/05_week05_joins/rules.sql
+5) course/05_week05_joins/test_negative_inserts.sql
+6) course/05_week05_joins/integrity.sql
 
 ## Deliverables
-- 05_week05_joins/test_negative_inserts.sql (run results)
+- course/05_week05_joins/test_negative_inserts.sql (run results)
 - Notes explaining why each statement fails
 
 ## Grading criteria
@@ -22,5 +22,6 @@
 - Error messages are clear
 - Integrity query returns 0 rows
 - Test cases are executed correctly
+
 
 

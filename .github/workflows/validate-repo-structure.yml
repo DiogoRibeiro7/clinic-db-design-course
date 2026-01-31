@@ -11,11 +11,18 @@ jobs:
 
       - name: Validate required folders exist
         run: |
-          test -d "00_setup"
+          test -d "course"
+          test -d "course/00_setup"
+          test -d "course/01_week01_basics"
+          test -d "course/02_week02_er_modeling"
+          test -d "course/03_week03_normalization"
+          test -d "course/04_week04_constraints"
+          test -d "course/05_week05_joins"
+          test -d "course/06_week06_transactions"
+          test -d "course/07_week07_indexing"
+          test -d "course/08_week08_final_change_request"
           test -d "shared"
-          test -d "01_week01_basics"
-          test -d "03_week03_mapping"
-          echo "Basic structure OK."
+          echo "Course structure OK."
 
       - name: Validate shared/reset.sql exists
         run: |
@@ -24,7 +31,7 @@ jobs:
 
       - name: Validate Week 3 runnable pack exists
         run: |
-          test -f "03_week03_mapping/schema_v1.sql"
-          test -f "03_week03_mapping/seed_v1.sql"
-          test -f "03_week03_mapping/integrity_v1.sql"
+          test -f "course/03_week03_normalization/schema_v1.sql"
+          test -f "course/03_week03_normalization/seed_v1.sql"
+          test -f "course/03_week03_normalization/integrity_v1.sql"
           echo "Week 3 pack OK."

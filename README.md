@@ -11,66 +11,66 @@ Use the week-specific files for each lab. Examples:
 
 Week 1 (denormalized):
 1) `shared/reset.sql`
-2) `01_week01_basics/schema.sql`
-3) `01_week01_basics/seed.sql`
-4) `01_week01_basics/exercises.sql`
+2) `course/01_week01_basics/schema.sql`
+3) `course/01_week01_basics/seed.sql`
+4) `course/01_week01_basics/exercises.sql`
 
 Week 2 (ER modeling):
-1) `02_week02_er_modeling/requirements.md`
-2) `02_week02_er_modeling/er_diagram_template.drawio`
-3) `02_week02_er_modeling/assumptions_template.md`
-4) `02_week02_er_modeling/submission_checklist.md`
+1) `course/02_week02_er_modeling/requirements.md`
+2) `course/02_week02_er_modeling/er_diagram_template.drawio`
+3) `course/02_week02_er_modeling/assumptions_template.md`
+4) `course/02_week02_er_modeling/submission_checklist.md`
 
 Week 3 (mapping):
 1) `shared/reset.sql`
-2) `03_week03_normalization/schema_v1.sql`
-3) `03_week03_normalization/seed_v1.sql`
-4) `03_week03_normalization/queries_v1.sql`
-5) `03_week03_normalization/integrity_v1.sql`
+2) `course/03_week03_normalization/schema_v1.sql`
+3) `course/03_week03_normalization/seed_v1.sql`
+4) `course/03_week03_normalization/queries_v1.sql`
+5) `course/03_week03_normalization/integrity_v1.sql`
 
 Week 4 (normalization):
-1) `04_week04_constraints/bad_schema.sql`
-2) `04_week04_constraints/bad_seed.sql`
-3) `04_week04_constraints/schema_v2.sql`
-4) `04_week04_constraints/seed_v2.sql`
-5) `04_week04_constraints/integrity_v2.sql`
+1) `course/04_week04_constraints/bad_schema.sql`
+2) `course/04_week04_constraints/bad_seed.sql`
+3) `course/04_week04_constraints/schema_v2.sql`
+4) `course/04_week04_constraints/seed_v2.sql`
+5) `course/04_week04_constraints/integrity_v2.sql`
 
 Week 5 (overlap triggers):
 1) `shared/reset.sql`
-2) `03_week03_normalization/schema_v1.sql`
-3) `03_week03_normalization/seed_v1.sql`
-4) `05_week05_joins/rules.sql`
-5) `05_week05_joins/test_negative_inserts.sql`
-6) `05_week05_joins/integrity.sql`
+2) `course/03_week03_normalization/schema_v1.sql`
+3) `course/03_week03_normalization/seed_v1.sql`
+4) `course/05_week05_joins/rules.sql`
+5) `course/05_week05_joins/test_negative_inserts.sql`
+6) `course/05_week05_joins/integrity.sql`
 
 Week 6 (billing):
 1) `shared/reset.sql`
-2) `03_week03_normalization/schema_v1.sql`
-3) `03_week03_normalization/seed_v1.sql`
-4) `06_week06_transactions/schema_billing.sql`
-5) `06_week06_transactions/seed_billing.sql`
-6) `06_week06_transactions/reporting_views.sql`
-7) `06_week06_transactions/integrity.sql`
+2) `course/03_week03_normalization/schema_v1.sql`
+3) `course/03_week03_normalization/seed_v1.sql`
+4) `course/06_week06_transactions/schema_billing.sql`
+5) `course/06_week06_transactions/seed_billing.sql`
+6) `course/06_week06_transactions/reporting_views.sql`
+7) `course/06_week06_transactions/integrity.sql`
 
 Week 7 (indexes and EXPLAIN):
 1) `shared/reset.sql`
-2) `03_week03_normalization/schema_v1.sql`
-3) `03_week03_normalization/seed_v1.sql`
-4) `06_week06_transactions/schema_billing.sql`
-5) `06_week06_transactions/seed_billing.sql`
-6) `07_week07_indexing/explain_tasks.sql` (before indexes)
-7) `07_week07_indexing/indexes.sql`
-8) `07_week07_indexing/explain_tasks.sql` (after indexes)
+2) `course/03_week03_normalization/schema_v1.sql`
+3) `course/03_week03_normalization/seed_v1.sql`
+4) `course/06_week06_transactions/schema_billing.sql`
+5) `course/06_week06_transactions/seed_billing.sql`
+6) `course/07_week07_indexing/explain_tasks.sql` (before indexes)
+7) `course/07_week07_indexing/indexes.sql`
+8) `course/07_week07_indexing/explain_tasks.sql` (after indexes)
 
 Week 8 (final change request):
-1) `08_week08_final_change_request/change_request_A_insurance.md` or `08_week08_final_change_request/change_request_B_lab_tests.md` or `08_week08_final_change_request/change_request_C_rooms.md`
-2) `08_week08_final_change_request/migration_template.sql`
-3) `08_week08_final_change_request/final_submission_checklist.md`
+1) `course/08_week08_final_change_request/change_request_A_insurance.md` or `course/08_week08_final_change_request/change_request_B_lab_tests.md` or `course/08_week08_final_change_request/change_request_C_rooms.md`
+2) `course/08_week08_final_change_request/migration_template.sql`
+3) `course/08_week08_final_change_request/final_submission_checklist.md`
 
 ## Folder structure
-- 00_setup/ (install notes, tooling, and starter checks)
+- course/00_setup/ (install notes, tooling, and starter checks)
 - shared/ (shared scripts and assets)
-- 01_week01_basics/ ... 08_week08_final_change_request/ (weekly materials)
+- course/01_week01_basics/ ... course/08_week08_final_change_request/ (weekly materials)
 
 ## Environment
 - Windows
@@ -90,3 +90,4 @@ py scripts\wait_for_mongo.py --host 127.0.0.1 --port 27017 --timeout 60
 
 See `docs/RUNNING_LABS.md` for the standard lab workflow and troubleshooting.
   
+

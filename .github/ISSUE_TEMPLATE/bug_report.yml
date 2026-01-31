@@ -17,7 +17,7 @@ body:
       description: Include exact commands used
       placeholder: |
         mysql < shared/reset.sql
-        mysql clinic_db < 05_week05_constraints_triggers/rules.sql
+        mysql clinic_db < course/05_week05_joins/rules.sql
     validations:
       required: true
   - type: textarea

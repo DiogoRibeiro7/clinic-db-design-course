@@ -1,29 +1,44 @@
 week-01:
   - changed-files:
-      - any-glob-to-any-file: "01_week01_basics/**"
+      - any-glob-to-any-file: "course/01_week01_basics/**"
 
 week-02:
   - changed-files:
-      - any-glob-to-any-file: "02_week02_er_model/**"
+      - any-glob-to-any-file: "course/02_week02_er_modeling/**"
 
 week-03:
   - changed-files:
-      - any-glob-to-any-file: "03_week03_mapping/**"
+      - any-glob-to-any-file: "course/03_week03_normalization/**"
 
 week-04:
   - changed-files:
-      - any-glob-to-any-file: "04_week04_normalization/**"
+      - any-glob-to-any-file: "course/04_week04_constraints/**"
 
 week-05:
   - changed-files:
-      - any-glob-to-any-file: "05_week05_constraints_triggers/**"
+      - any-glob-to-any-file: "course/05_week05_joins/**"
 
 week-06:
   - changed-files:
-      - any-glob-to-any-file: "06_week06_billing/**"
+      - any-glob-to-any-file: "course/06_week06_transactions/**"
+
+week-07:
+  - changed-files:
+      - any-glob-to-any-file: "course/07_week07_indexing/**"
+
+week-08:
+  - changed-files:
+      - any-glob-to-any-file: "course/08_week08_final_change_request/**"
 
 docs:
   - changed-files:
       - any-glob-to-any-file: "**/*.md"
-      - any-glob-to-any-file: "00_setup/**"
+      - any-glob-to-any-file: "course/00_setup/**"
       - any-glob-to-any-file: "shared/**"
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file: ".github/workflows/**"
+      - any-glob-to-any-file: ".github/labeler.yml"
+      - any-glob-to-any-file: ".github/pull_request_template.md"
+      - any-glob-to-any-file: ".github/ISSUE_TEMPLATE/**"

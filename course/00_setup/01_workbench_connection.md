@@ -44,4 +44,4 @@ Notes:
 - [ ] Workbench connection saved as clinic_local
 - [ ] clinic_db schema created
 - [ ] clinic_admin@localhost created with privileges
-- [ ] Next: run course/shared/reset.sql then Week 3 scripts successfully
+- [ ] Next: run shared/reset.sql then Week 3 scripts successfully

@@ -11,7 +11,7 @@ Run course SQL scripts in the correct order.
 5) Repeat for each script in order.
 
 ## Week 3 run order (example)
-1) course/shared/reset.sql
+1) shared/reset.sql
 2) course/03_week03_normalization/schema_v1.sql
 3) course/03_week03_normalization/seed_v1.sql
 4) course/03_week03_normalization/queries_v1.sql
@@ -19,7 +19,7 @@ Run course SQL scripts in the correct order.
 
 ## Tips
 - If a script fails, fix the error and re-run only the failing statements.
-- Use course/shared/reset.sql before re-running schema and seed files.
+- Use shared/reset.sql before re-running schema and seed files.
 
 ## Troubleshooting
 - Service not running:
@@ -32,4 +32,4 @@ Run course SQL scripts in the correct order.
 ## First run checklist
 - [ ] Scripts run in the correct order
 - [ ] Week 3 integrity checks return 0 rows
-- [ ] Completed: run course/shared/reset.sql then Week 3 scripts successfully
+- [ ] Completed: run shared/reset.sql then Week 3 scripts successfully

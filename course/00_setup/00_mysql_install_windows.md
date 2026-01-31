@@ -43,4 +43,4 @@ Install MySQL Community Server 8.0.x on Windows using MySQL Installer (Community
 - [ ] MySQL80 service running on port 3306
 - [ ] MySQL Workbench 8.0.x installed
 - [ ] Ready to connect with root in Workbench
-- [ ] Next: run course/shared/reset.sql then Week 3 scripts successfully
+- [ ] Next: run shared/reset.sql then Week 3 scripts successfully

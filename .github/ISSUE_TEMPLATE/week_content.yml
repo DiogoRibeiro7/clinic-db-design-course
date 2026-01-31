@@ -16,8 +16,8 @@ body:
       label: Files changed
       description: List files you added or updated
       placeholder: |
-        03_week03_mapping/schema_v1.sql
-        03_week03_mapping/seed_v1.sql
+        course/03_week03_normalization/schema_v1.sql
+        course/03_week03_normalization/seed_v1.sql
     validations:
       required: true
   - type: textarea
@@ -27,9 +27,9 @@ body:
       description: How to run the scripts (reset -> schema -> seed -> integrity)
       placeholder: |
         mysql < shared/reset.sql
-        mysql clinic_db < 03_week03_mapping/schema_v1.sql
-        mysql clinic_db < 03_week03_mapping/seed_v1.sql
-        mysql clinic_db < 03_week03_mapping/integrity_v1.sql
+        mysql clinic_db < course/03_week03_normalization/schema_v1.sql
+        mysql clinic_db < course/03_week03_normalization/seed_v1.sql
+        mysql clinic_db < course/03_week03_normalization/integrity_v1.sql
     validations:
       required: true
   - type: textarea
