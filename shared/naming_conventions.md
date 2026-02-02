@@ -11,13 +11,13 @@
 - Table names: plural nouns (patients, appointments, invoices).
 - Column names: singular nouns (patient_id, start_time, total_amount).
 - Primary keys: `<table>`_id (patient_id, appointment_id).
-- Foreign keys: <referenced_table>_id (patient_id, provider_id).
-- Junction tables: <table_a>_<table_b> (patient_provider).
+- Foreign keys: `<referenced_table>_id` (patient_id, provider_id).
+- Junction tables: `<table_a>_<table_b>` (patient_provider).
 - Index names: idx_`<table>`_`<column>` (idx_appointments_start_time).
 - Unique constraints: uq_`<table>`_`<column>` (uq_patients_email).
 - Foreign keys: fk_`<table>`_<referenced_table> (fk_appointments_patients).
-- Timestamps: use *_at (created_at, updated_at).
-- Booleans: use is_* or has_* (is_active, has_insurance).
+- Timestamps: use `*_at` (created_at, updated_at).
+- Booleans: use `is_*` or `has_*` (is_active, has_insurance).
 
 ## SQL formatting
 
