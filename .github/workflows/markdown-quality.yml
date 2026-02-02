@@ -25,5 +25,6 @@ jobs:
             --no-progress
             --accept 200,204,206,429
             "**/*.md"
+          failIfEmpty: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
