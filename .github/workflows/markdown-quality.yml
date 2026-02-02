@@ -24,7 +24,6 @@ jobs:
             --verbose
             --no-progress
             --accept 200,204,206,429
-            --exclude-mail
             "**/*.md"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
