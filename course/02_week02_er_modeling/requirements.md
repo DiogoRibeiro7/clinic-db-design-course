@@ -1,9 +1,11 @@
 # Clinic domain requirements
 
 ## Narrative
+
 A small outpatient clinic schedules appointments between patients and doctors. Each appointment may include one or more services and can result in an invoice. Patients may have multiple appointments over time. Doctors have specialties and provide services. The clinic wants to track appointments, services performed, and billing details to support daily operations and reporting.
 
 ## Base business rules
+
 1) A patient can have zero or many appointments.
 2) Each appointment belongs to exactly one patient.
 3) A doctor can have zero or many appointments.
@@ -26,6 +28,7 @@ A small outpatient clinic schedules appointments between patients and doctors. E
 20) A service can be marked inactive but remains in history.
 
 ## Scope boundaries (out of scope)
+
 - Inpatient admissions and bed management.
 - Pharmacy inventory management.
 - Payroll and HR records.

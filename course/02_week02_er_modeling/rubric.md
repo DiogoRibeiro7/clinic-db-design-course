@@ -1,6 +1,7 @@
 # ER diagram rubric
 
 ## Criteria
+
 - Cardinality is correct for all relationships.
 - Optionality is correct for all relationships.
 - Primary keys are clearly identified.
@@ -10,6 +11,7 @@
 - Naming is consistent and in snake_case.
 
 ## Scoring (suggested)
+
 - Cardinality and optionality: 40%
 - Keys and relationship correctness: 30%
 - Requirements coverage: 20%
