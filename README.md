@@ -1,10 +1,39 @@
 # Clinic DB Design Course (MySQL 8.0)
 
+## Table of contents
+- Overview
+- Learning outcomes
+- Getting started
+- Standard workflow
+- Course structure
+- Tooling and CI
+- Contributing
+
 ## Course goals
 - Design relational schemas using ER modeling and normalization principles.
 - Implement schemas in MySQL Community Server 8.0.x.
 - Apply constraints, transactions, and indexing for data integrity and performance.
 - Practice iterative design changes with a final change request.
+
+## Overview
+This repository contains an 8-week bachelor-level course on relational database design using MySQL 8.0 and MySQL Workbench. Each week includes a focused lab with scripts, exercises, and guidance.
+
+## Learning outcomes
+- Translate requirements into ER models with correct cardinality and keys.
+- Map ER models into normalized relational schemas.
+- Write DDL with appropriate constraints and indexes.
+- Detect and explain data anomalies and integrity violations.
+- Validate schemas using repeatable integrity checks.
+
+## Getting started
+1) Install MySQL Community Server 8.0.x and MySQL Workbench 8.0.x:
+   - `course/00_setup/00_mysql_install_windows.md`
+2) Create a Workbench connection and user:
+   - `course/00_setup/01_workbench_connection.md`
+3) Run scripts in Workbench:
+   - `course/00_setup/02_running_sql_scripts.md`
+4) Start with Week 1:
+   - `course/01_week01_basics/README.md`
 
 ## Standard workflow
 Use the week-specific files for each lab. Examples:
@@ -67,10 +96,10 @@ Week 8 (final change request):
 2) `course/08_week08_final_change_request/migration_template.sql`
 3) `course/08_week08_final_change_request/final_submission_checklist.md`
 
-## Folder structure
-- course/00_setup/ (install notes, tooling, and starter checks)
-- shared/ (shared scripts and assets)
-- course/01_week01_basics/ ... course/08_week08_final_change_request/ (weekly materials)
+## Course structure
+- `course/00_setup/` (install notes, tooling, and starter checks)
+- `shared/` (shared scripts and assets)
+- `course/01_week01_basics/ ... course/08_week08_final_change_request/` (weekly materials)
 
 ## Environment
 - Windows
@@ -79,6 +108,16 @@ Week 8 (final change request):
 
 ## Solutions policy
 Solutions are kept off the main branch. See `docs/solutions_policy.md` for the recommended workflow.
+
+## Tooling and CI
+- SQL smoke tests run with MySQL 8 on GitHub Actions.
+- Integrity checks must return 0 rows (see `shared/integrity_contract.md`).
+- Structure validation ensures required folders exist.
+
+## Contributing
+- Use issue templates for week content and bug reports.
+- Follow the run order in each week README and include integrity output in PRs.
+- Keep student-facing content on main; put solutions on a `teacher` branch.
 
 ## Docker (labs)
 Use the root `docker-compose.yml` to start Mongo once for all labs.
