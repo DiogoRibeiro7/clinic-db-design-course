@@ -1,0 +1,17 @@
+name: Enforce branch merge policy
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  check-source-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Only allow PRs from develop to main
+        run: |
+          if [ "$GITHUB_HEAD_REF" != "develop" ]; then
+            echo "::error::PRs to main must come from the develop branch. Got: $GITHUB_HEAD_REF"
+            exit 1
+          fi
+          echo "Source branch is develop — allowed."
