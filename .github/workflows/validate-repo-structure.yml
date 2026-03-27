@@ -15,10 +15,10 @@ jobs:
           test -d "course/00_setup"
           test -d "course/01_week01_basics"
           test -d "course/02_week02_er_modeling"
-          test -d "course/03_week03_normalization"
-          test -d "course/04_week04_constraints"
-          test -d "course/05_week05_joins"
-          test -d "course/06_week06_transactions"
+          test -d "course/03_week03_relational_mapping"
+          test -d "course/04_week04_normalization"
+          test -d "course/05_week05_constraints_triggers"
+          test -d "course/06_week06_billing_views"
           test -d "course/07_week07_indexing"
           test -d "course/08_week08_final_change_request"
           test -d "shared"
@@ -31,7 +31,7 @@ jobs:
 
       - name: Validate Week 3 runnable pack exists
         run: |
-          test -f "course/03_week03_normalization/schema_v1.sql"
-          test -f "course/03_week03_normalization/seed_v1.sql"
-          test -f "course/03_week03_normalization/integrity_v1.sql"
+          test -f "course/03_week03_relational_mapping/schema_v1.sql"
+          test -f "course/03_week03_relational_mapping/seed_v1.sql"
+          test -f "course/03_week03_relational_mapping/integrity_v1.sql"
           echo "Week 3 pack OK."

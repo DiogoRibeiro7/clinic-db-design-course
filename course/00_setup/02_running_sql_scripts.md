@@ -15,10 +15,10 @@ Run course SQL scripts in the correct order.
 ## Week 3 run order (example)
 
 1) shared/reset.sql
-2) course/03_week03_normalization/schema_v1.sql
-3) course/03_week03_normalization/seed_v1.sql
-4) course/03_week03_normalization/queries_v1.sql
-5) course/03_week03_normalization/integrity_v1.sql
+2) course/03_week03_relational_mapping/schema_v1.sql
+3) course/03_week03_relational_mapping/seed_v1.sql
+4) course/03_week03_relational_mapping/queries_v1.sql
+5) course/03_week03_relational_mapping/integrity_v1.sql
 
 ## Tips
 

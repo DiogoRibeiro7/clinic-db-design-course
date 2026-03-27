@@ -44,17 +44,17 @@ jobs:
           MYSQL_PWD: root
         run: |
           mysql -h 127.0.0.1 -u root < shared/reset.sql
-          mysql -h 127.0.0.1 -u root clinic_db < course/03_week03_normalization/schema_v1.sql
-          mysql -h 127.0.0.1 -u root clinic_db < course/03_week03_normalization/seed_v1.sql
-          bash scripts/check_integrity.sh course/03_week03_normalization/integrity_v1.sql
+          mysql -h 127.0.0.1 -u root clinic_db < course/03_week03_relational_mapping/schema_v1.sql
+          mysql -h 127.0.0.1 -u root clinic_db < course/03_week03_relational_mapping/seed_v1.sql
+          bash scripts/check_integrity.sh course/03_week03_relational_mapping/integrity_v1.sql
 
       - name: Run Week 6 (schema + seed + integrity)
         env:
           MYSQL_PWD: root
         run: |
           mysql -h 127.0.0.1 -u root < shared/reset.sql
-          mysql -h 127.0.0.1 -u root clinic_db < course/03_week03_normalization/schema_v1.sql
-          mysql -h 127.0.0.1 -u root clinic_db < course/03_week03_normalization/seed_v1.sql
-          mysql -h 127.0.0.1 -u root clinic_db < course/06_week06_transactions/schema_billing.sql
-          mysql -h 127.0.0.1 -u root clinic_db < course/06_week06_transactions/seed_billing.sql
-          bash scripts/check_integrity.sh course/06_week06_transactions/integrity.sql
+          mysql -h 127.0.0.1 -u root clinic_db < course/03_week03_relational_mapping/schema_v1.sql
+          mysql -h 127.0.0.1 -u root clinic_db < course/03_week03_relational_mapping/seed_v1.sql
+          mysql -h 127.0.0.1 -u root clinic_db < course/06_week06_billing_views/schema_billing.sql
+          mysql -h 127.0.0.1 -u root clinic_db < course/06_week06_billing_views/seed_billing.sql
+          bash scripts/check_integrity.sh course/06_week06_billing_views/integrity.sql
