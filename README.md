@@ -1,14 +1,17 @@
-# Clinic DB Design Course (MySQL 8.0)
+# DB Design Course (MySQL 8.0)
 
 ## Table of contents
 
-- Overview
-- Learning outcomes
-- Getting started
-- Standard workflow
-- Course structure
-- Tooling and CI
-- Contributing
+- [Course goals](#course-goals)
+- [Overview](#overview)
+- [Learning outcomes](#learning-outcomes)
+- [Getting started](#getting-started)
+- [Standard workflow](#standard-workflow)
+- [Course structure](#course-structure)
+- [Environment](#environment)
+- [Solutions policy](#solutions-policy)
+- [Tooling and CI](#tooling-and-ci)
+- [Contributing](#contributing)
 
 ## Course goals
 
@@ -61,45 +64,45 @@ Week 2 (ER modeling):
 Week 3 (mapping):
 
 1) `shared/reset.sql`
-2) `course/03_week03_normalization/schema_v1.sql`
-3) `course/03_week03_normalization/seed_v1.sql`
-4) `course/03_week03_normalization/queries_v1.sql`
-5) `course/03_week03_normalization/integrity_v1.sql`
+2) `course/03_week03_relational_mapping/schema_v1.sql`
+3) `course/03_week03_relational_mapping/seed_v1.sql`
+4) `course/03_week03_relational_mapping/queries_v1.sql`
+5) `course/03_week03_relational_mapping/integrity_v1.sql`
 
 Week 4 (normalization):
 
-1) `course/04_week04_constraints/bad_schema.sql`
-2) `course/04_week04_constraints/bad_seed.sql`
-3) `course/04_week04_constraints/schema_v2.sql`
-4) `course/04_week04_constraints/seed_v2.sql`
-5) `course/04_week04_constraints/integrity_v2.sql`
+1) `course/04_week04_normalization/bad_schema.sql`
+2) `course/04_week04_normalization/bad_seed.sql`
+3) `course/04_week04_normalization/schema_v2.sql`
+4) `course/04_week04_normalization/seed_v2.sql`
+5) `course/04_week04_normalization/integrity_v2.sql`
 
 Week 5 (overlap triggers):
 
 1) `shared/reset.sql`
-2) `course/03_week03_normalization/schema_v1.sql`
-3) `course/03_week03_normalization/seed_v1.sql`
-4) `course/05_week05_joins/rules.sql`
-5) `course/05_week05_joins/test_negative_inserts.sql`
-6) `course/05_week05_joins/integrity.sql`
+2) `course/03_week03_relational_mapping/schema_v1.sql`
+3) `course/03_week03_relational_mapping/seed_v1.sql`
+4) `course/05_week05_constraints_triggers/rules.sql`
+5) `course/05_week05_constraints_triggers/test_negative_inserts.sql`
+6) `course/05_week05_constraints_triggers/integrity.sql`
 
 Week 6 (billing):
 
 1) `shared/reset.sql`
-2) `course/03_week03_normalization/schema_v1.sql`
-3) `course/03_week03_normalization/seed_v1.sql`
-4) `course/06_week06_transactions/schema_billing.sql`
-5) `course/06_week06_transactions/seed_billing.sql`
-6) `course/06_week06_transactions/reporting_views.sql`
-7) `course/06_week06_transactions/integrity.sql`
+2) `course/03_week03_relational_mapping/schema_v1.sql`
+3) `course/03_week03_relational_mapping/seed_v1.sql`
+4) `course/06_week06_billing_views/schema_billing.sql`
+5) `course/06_week06_billing_views/seed_billing.sql`
+6) `course/06_week06_billing_views/reporting_views.sql`
+7) `course/06_week06_billing_views/integrity.sql`
 
 Week 7 (indexes and EXPLAIN):
 
 1) `shared/reset.sql`
-2) `course/03_week03_normalization/schema_v1.sql`
-3) `course/03_week03_normalization/seed_v1.sql`
-4) `course/06_week06_transactions/schema_billing.sql`
-5) `course/06_week06_transactions/seed_billing.sql`
+2) `course/03_week03_relational_mapping/schema_v1.sql`
+3) `course/03_week03_relational_mapping/seed_v1.sql`
+4) `course/06_week06_billing_views/schema_billing.sql`
+5) `course/06_week06_billing_views/seed_billing.sql`
 6) `course/07_week07_indexing/explain_tasks.sql` (before indexes)
 7) `course/07_week07_indexing/indexes.sql`
 8) `course/07_week07_indexing/explain_tasks.sql` (after indexes)
@@ -137,14 +140,3 @@ Solutions are kept off the main branch. See `docs/solutions_policy.md` for the r
 - Use issue templates for week content and bug reports.
 - Follow the run order in each week README and include integrity output in PRs.
 - Keep student-facing content on main; put solutions on a `teacher` branch.
-
-## Docker (labs)
-
-Use the root `docker-compose.yml` to start Mongo once for all labs.
-
-```shell
-docker compose up -d
-py scripts\wait_for_mongo.py --host 127.0.0.1 --port 27017 --timeout 60
-```
-
-See `docs/RUNNING_LABS.md` for the standard lab workflow and troubleshooting.

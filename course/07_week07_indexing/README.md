@@ -9,10 +9,10 @@
 ## Run order
 
 1) shared/reset.sql
-2) course/03_week03_normalization/schema_v1.sql
-3) course/03_week03_normalization/seed_v1.sql
-4) course/06_week06_transactions/schema_billing.sql
-5) course/06_week06_transactions/seed_billing.sql
+2) course/03_week03_relational_mapping/schema_v1.sql
+3) course/03_week03_relational_mapping/seed_v1.sql
+4) course/06_week06_billing_views/schema_billing.sql
+5) course/06_week06_billing_views/seed_billing.sql
 6) course/07_week07_indexing/explain_tasks.sql (before indexes)
 7) course/07_week07_indexing/indexes.sql
 8) course/07_week07_indexing/explain_tasks.sql (after indexes)
